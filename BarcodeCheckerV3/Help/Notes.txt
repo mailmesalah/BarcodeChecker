@@ -1,0 +1,1 @@
+1> Automation on pressing a key combination even without application on focus. Sends words to current focus.

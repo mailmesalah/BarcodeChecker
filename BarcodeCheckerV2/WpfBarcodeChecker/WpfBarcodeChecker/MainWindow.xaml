@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfBarcodeChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBarcodeChecker"
+        mc:Ignorable="d"
+        Title="handyferdz" Height="564.773" Width="409.21" Icon="ico.png" Closing="Window_Closing">
+    <Grid Margin="0,0,-8,15">
+        <ListBox x:Name="listBoxBarcodes" HorizontalAlignment="Left" Height="341" Margin="10,60,0,0" VerticalAlignment="Top" Width="373" FontSize="18.667" ToolTip="Lists the accepted barcodes..."/>
+        <TextBox x:Name="textBoxInput" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" ToolTip="Enter barcode here..." KeyDown="textBoxInput_KeyDown" FontWeight="Bold" FontSize="18.667" SpellCheck.IsEnabled="True" TextChanged="textBoxInput_TextChanged"/>
+        <Label x:Name="labelCount" Content="0" HorizontalAlignment="Left" Height="72" Margin="275,406,0,0" VerticalAlignment="Top" Width="108" ToolTip="Shows the total number of accepted barcodes." FontSize="32" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="buttonRemove" Content="Remove" HorizontalAlignment="Left" Margin="114,420,0,59" Width="98" Click="buttonRemove_Click" ToolTip="Removes selected barcode from the list."/>
+        <TextBox x:Name="textBoxSeconds" HorizontalAlignment="Left" Margin="217,423,0,59" TextWrapping="Wrap" Width="41" ToolTip="Enter delay time for pasting here..." KeyDown="textBoxInput_KeyDown" FontWeight="Bold" FontSize="18.667" SpellCheck.IsEnabled="True" Text="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="buttonRemoveAll" Content="Clear" HorizontalAlignment="Left" Margin="10,420,0,59" Width="98" Click="buttonRemoveAll_Click" ToolTip="Clears the accepted list of barcodes."/>
+        <TextBox x:Name="textBoxHost" HorizontalAlignment="Left" Height="23" Margin="11,488,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Center" TextChanged="textBoxHost_TextChanged"/>
+        <TextBox x:Name="textBoxDrive" HorizontalAlignment="Left" Height="23" Margin="114,488,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Center" TextChanged="textBoxDrive_TextChanged"/>
+        <Label x:Name="labelProduct" Content="0" HorizontalAlignment="Left" Margin="217,483,0,0" Width="79" FontSize="13.333" FontWeight="Bold" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="28" HorizontalContentAlignment="Center">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="label" Content="Host" HorizontalAlignment="Left" Height="26" Margin="11,462,0,0" VerticalAlignment="Top" Width="97" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.429"/>
+        <Label x:Name="label_Copy" Content="Drive" HorizontalAlignment="Left" Height="26" Margin="114,462,0,0" VerticalAlignment="Top" Width="98" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.429"/>
+
+    </Grid>
+</Window>
